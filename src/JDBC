@@ -1,0 +1,34 @@
+JDBC : 
+Java Database Connectivity 
+A java application can commuincate with database using JDBC API 
+API - Application program Interfcae
+
+JDBC API provides specifications to use database using java programs.
+
+Each database provider/vendor provides a proprietry Driver to commiuncate with the database.
+
+JDBC Architecture :
+
+					Java Application
+      						|
+     					JDBC API        -> specification means what should be implemented in the classes
+						    |
+					JDBC Driver Manager ->
+ 						    |
+		   JDBC Driver  JDBC Driver  JDBC Driver
+				|	 	    |	         |
+    		  Oracle     SQL server   ODBC Data Source
+
+Steps to Connect to Databse using JDBC : 
+	Steps : 
+		1.Register driver  -> Optional from JDBC Version 4 .
+		2.Get Connection
+		3.Create Statement  ->Java Object which encapuslates sql query.
+		4.Execute query	   	->get the result
+		5.Close Connection.
+		
+1.Register Driver: Loads the JDBC driver so Java can communicate with the database; optional from JDBC 4.0.
+2.Get Connection: Establishes a connection between the Java application and the database.
+3.Create Statement: Creates a statement object to send SQL queries to the database.
+4.Execute Query: Executes the SQL query and performs the required database operation.
+5.Close Connection: Closes the database connection and releases the resources.
