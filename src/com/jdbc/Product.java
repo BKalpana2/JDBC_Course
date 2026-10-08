@@ -19,10 +19,6 @@ public class Product {
 			String insert="insert into product values(?,?,?)";
 			PreparedStatement ps=con.prepareStatement(insert);
 			//step 4 : execute the query
-			ps.setInt(1, 104);
-			ps.setString(2, "AC");
-			ps.setInt(3,90000);
-			
 			int result=ps.executeUpdate();
 			System.out.println(result+" row inserted ");
 			ResultSet resultSet=statement.executeQuery(sql);
