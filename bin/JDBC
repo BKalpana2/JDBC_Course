@@ -1,3 +1,5 @@
+class 1
+-----------------------------------------------------------
 JDBC : 
 Java Database Connectivity 
 A java application can commuincate with database using JDBC API 
@@ -32,3 +34,92 @@ Steps to Connect to Databse using JDBC :
 3.Create Statement: Creates a statement object to send SQL queries to the database.
 4.Execute Query: Executes the SQL query and performs the required database operation.
 5.Close Connection: Closes the database connection and releases the resources.
+
+class 2
+-------------------------------------------------------------------
+Steps to run a JDBC program
+
+1.Register the driver(optional)
+   class.forName(.....);
+
+2. Establish the connection
+   Connection con = DriverManager.getConnection("url", "dbuser","dbpassword");
+   
+3. create statement
+   To execute a query we need a statement object
+   we get the statement object from 
+
+   statement statement = con.createStatement();
+
+4. Execute the statement
+-> statement.executeQuery() - to execute select statements
+- It accepts the select query as the input in the argument
+- Returns ResultSet object which contains the rows returned by select query
+
+ResultSet:
+ResultSet is a JDBC interface which is used to store and process the data returnde by SQL select query
+When we execute a select statement using executeQuery(), JDBC returns the result in the form of a ResultSet object
+ResultSet contains a cursor which points to the rows returnsed by the query
+Initially the cursor will be positioned before the first row
+for eg:
+
+we must call next() method to check whether the result set has any next() row or  not
+
+ResultSet has next() method which performs 2 actions:
+1. Moves the cursor to the next row 
+2. Returns 
+
+-> statement.executeUpdate() - to run the non-select statements like insert,create,update,delete
+- It accepts the non-select statements as an input
+- It returns an int(numeric) value which specifies the number of rows speified
+
+-> statement.execute();
+- It can be used to execute/run both select and non-select statement
+- It returns a boolean value - true or false
+- It returns true when a select statement is executed
+- It returns false when a non-select statement is executed
+
+5. Close the resourse like connection.
+
+class 3 : 
+--------------------------------------------------
+Driver manager :
+Driver manager is a class.
+
+Result Set : 
+
+
+Task 1:
+create a table : 
+product -productID ,productName,productPrice
+
+Insert 3 rows into product table
+write a jdbc code to display 3 rows of product table.
+
+
+Task 2 : 
+1.Create/Insert  -executeUpdate()
+2.Retrieve -select -executeQuery()
+3.update  -executeUpdate()
+4.delete -executeUpdate()
+
+Task 3 : 
+create a utility which returns a conncetion object
+class DBUtil
+
+-create a static method getConnection()
+which returns a conncetion object
+
+
+
+
+
+
+
+
+
+
+
+
+
+

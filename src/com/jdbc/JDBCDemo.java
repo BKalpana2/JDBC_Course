@@ -13,6 +13,7 @@ public class JDBCDemo {
 			//step 2 : Establish the connection
 			//get cooncetion() Paramters : 
 			//parameter 1  : 
+		
 			//url : protocal://servername:port/databasename
 			//jdbc:mysql://localhost:3306/company
 			//parameter 2 :
@@ -21,7 +22,7 @@ public class JDBCDemo {
 			//password
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/company_db","root","root");
 			System.out.println("Connected to database");
-			//step 3 : 
+			//step 3 :create the statment 
 			String sql="select * from employee";
 			Statement statement= con.createStatement();
 
@@ -33,6 +34,7 @@ public class JDBCDemo {
 				System.out.println("ID : "+id);
 				System.out.println("Name : "+name);
 			}
+			//step 5 : close the conncetion
 			resultSet.close();
 			statement.close();
 			con.close();
