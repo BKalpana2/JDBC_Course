@@ -110,9 +110,34 @@ class DBUtil
 -create a static method getConnection()
 which returns a conncetion object
 
+Write a jdbc program to perform the following : 
+1.create table student : 
+id
+name
+age
 
+2.create a jdbc program to perform curd operations on student table : 
+write
+insert()  - to insert a row into table
+retrieve()- to list the rows in table
+update()  - to update a row in table
+delete()  - to delete a row in table
 
+Student Mangement System : 
+steps :
 
+1.create database -sms 
+->create database sms;
+->use sms;
+
+2.create table -student
+create table student(
+id int primary key auto_increment,
+name varchar(50),
+age int
+);
+
+ 
 
 
 

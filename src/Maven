@@ -1,0 +1,21 @@
+Maven Build Tool : 
+
+1..maven is a build and dependency manage tool which can be used to create and deploy java projects.
+2..we can use Maven to build management and dependenecy management.
+
+1.Build Management :
+ Build management is the process of converting java code into final executable or deployable application by performing the following 
+ 	compiling
+ 	testing
+ 	packaging
+
+2.Dependency Management : 
+  It is the process of automatically downloading the required jar files(libraries) required by the java application.
+  
+  Dependency :
+  A dependency is a jar file(external library) which the java application need to perform a task.
+    
+groupId :Identifies the organisation.
+artifactId : Name of the project.
+vesion : specifies the project version.
+
