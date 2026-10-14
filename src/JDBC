@@ -56,6 +56,9 @@ Steps to run a JDBC program
 - It accepts the select query as the input in the argument
 - Returns ResultSet object which contains the rows returned by select query
 
+
+class 3 :
+-------------------------------------------------------------------------------------------------
 ResultSet:
 ResultSet is a JDBC interface which is used to store and process the data returnde by SQL select query
 When we execute a select statement using executeQuery(), JDBC returns the result in the form of a ResultSet object
@@ -137,7 +140,60 @@ name varchar(50),
 age int
 );
 
+
+class 4 : 
+----------------------------------------------------------------------------------------------------------------
+ Statement : 
+ statement object represents the query like select query or statement like insert , update  and delete.
  
+ connection con =DriverManager.getConnectionI(url,username,password);
+ 
+Statement stmt=con.createStatement();
+
+//select
+stmt.executeQuery("select Query");
+//insert ,update and delete
+stmt.executeUpdate("Queries");
+
+ResultSet :
+ResultSet will used in the select Query to display all the rows in the table.
+ResultSet  resultset=stmt.executeQuery("select query");
+
+while(resultset.next()){
+//get each column of row
+int id=resultset.getInt(id);//1 ->  we also use 1 instead of id because it will also return the column
+String name=resultset.getString(name);//2 -> we also use 1 instead of id because it will also return the column
+System.out.println(id+" , "+name);
+}
+
+
+PreparedStatement VS Statement
+--------------------------------------------------------------------------
+PreparedStatement provided better security and better performance than statement.
+In Statement , for SQL Statement like insert , update ,delete or select ,the values are concatenated in the query/statement.
+
+PreparedStatement uses ? -> placeholders instead of values in the query.
+Statement is vulnerable to SQL Injection attacks.
+
+SQLInjection :  means a security attack in which an attacker inserts malicious  SQL Code through user input
+It is done to manipulate/modify the database query.
+
+Statement is compiled every time by the database 
+PreparedStatement need not be complied for each execution.
+
+For Statement , we usually submit the same sql query with same data multiple times .
+with PreparedStatement we can execute multiple times by changing the parameter values.
+
+PreparedStatement is preferred because it prevents SQL injection 
+It improves the performance because same query can be executed repeatedly with different values.
+
+ 
+
+
+
+
+
+
 
 
 
