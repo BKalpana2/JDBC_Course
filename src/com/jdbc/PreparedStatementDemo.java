@@ -10,8 +10,9 @@ public class PreparedStatementDemo {
 	public static void main(String[] args) {
 		try {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","root");
-			PreparedStatement ps=con.prepareStatement("select * from student where id=?");
+			PreparedStatement ps=con.prepareStatement("select * from student where id=? and name=?");
 			ps.setInt(1, 1);
+			ps.setString(1, "Ravi");
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()) {
 				int id=rs.getInt(1);
