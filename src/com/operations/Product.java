@@ -1,7 +1,7 @@
 package com.operations;
 
 //ENTITY/BEAN/MODEL/POJO
-public class Product {
+public class Product{
 	//PROPERTIES
 	private int id;
 	private String name;
@@ -55,4 +55,9 @@ public class Product {
 		return objectInfo;
 	}
 
+
+
+
+	
+	
 }

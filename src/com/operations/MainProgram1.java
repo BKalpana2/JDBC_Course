@@ -4,6 +4,7 @@ import static java.lang.System.out;
 
 import java.util.Scanner;
 
+
 public class MainProgram1 {
 	public static void main(String[] args) {
 		var scanner =new Scanner(System.in);

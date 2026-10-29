@@ -3,7 +3,6 @@ package com.operations;
 import static java.lang.System.out;
 
 import java.util.Scanner;
-
 public class MainProgram3 {
 	public static void main(String[] args) {
 		var scanner=new Scanner(System.in);
